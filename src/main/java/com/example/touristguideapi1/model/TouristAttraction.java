@@ -1,4 +1,4 @@
-package com.example.turistguide.model;
+package com.example.touristguideapi1.model;
 
 public class TouristAttraction {
     private String name;

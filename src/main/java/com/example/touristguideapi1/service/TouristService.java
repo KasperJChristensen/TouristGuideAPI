@@ -1,7 +1,7 @@
-package com.example.turistguide.service;
+package com.example.touristguideapi1.service;
 
-import com.example.turistguide.model.TouristAttraction;
-import com.example.turistguide.repository.TouristRepository;
+import com.example.touristguideapi1.model.TouristAttraction;
+import com.example.touristguideapi1.repository.TouristRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
