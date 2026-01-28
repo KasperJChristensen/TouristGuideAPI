@@ -1,0 +1,41 @@
+package com.example.turistguide.repository;
+
+import com.example.turistguide.model.TouristAttraction;
+import org.springframework.stereotype.Repository;
+
+import java.util.ArrayList;
+
+@Repository
+public class TouristRepository {
+    ArrayList<TouristAttraction> attractions = new ArrayList<>();
+
+    public TouristRepository() {
+        attractions();
+    }
+    private void attractions() {
+        attractions.add(new TouristAttraction("Tivoli",
+                "Med ca. 2 minutters gågang fra Københavnshovedbanegård finder du Tivoli. " +
+                        "Et historisk forlystelses park, der blev grundlagt i 1843 og har verdens ældste rutsjebane"
+        ));
+        attractions.add(new TouristAttraction("Strøget",
+                "Strøget starter foran København Rådhus og strækker sig ca. 1km igennem det centrale København til Kongens Nytorv"));
+    }
+
+    public void addAttraction(TouristAttraction attraction) {
+        attractions.add(attraction);
+    }
+
+    public ArrayList<TouristAttraction> getAttractions() {
+        return attractions;
+    }
+
+    public TouristAttraction findDescriptionByName(String name) {
+        for (TouristAttraction touristAttraction : attractions) {
+            if (touristAttraction.getName().equals(name)) {
+                return touristAttraction;
+            }
+        }
+        return null;
+
+    }
+}
