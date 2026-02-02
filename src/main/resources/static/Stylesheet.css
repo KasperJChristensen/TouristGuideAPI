@@ -1,0 +1,19 @@
+.highlight {
+    background-color: lightcoral;
+    color: black;
+    padding: 1em;
+    display: grid;
+    /*align-items: center;*/
+
+
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: 10px solid turquoise;
+    background-color: lightcoral;
+    color: black;
+    padding: 1em;
+}
