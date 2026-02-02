@@ -5,7 +5,6 @@ import com.example.touristguideapi1.repository.TouristRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Optional;
 
 @Service
 public class TouristService {
@@ -20,13 +19,16 @@ public class TouristService {
         return repository.getAttractions();
     }
 
-    public Optional<TouristAttraction> findDescriptionByName(String name) {
-
-        return Optional.ofNullable(repository.findDescriptionByName(name));
+    public TouristAttraction findAttractionByName(String name) {
+        return repository.findDescriptionByName(name);
     }
 
-    public void addAttractions(TouristAttraction attraction) {
+    public void addAttraction(TouristAttraction attraction) {
         repository.addAttraction(attraction);
+    }
+
+    public void removeAttraction(String name){
+        repository.removeAttraction(name);
     }
 
 

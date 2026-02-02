@@ -25,6 +25,10 @@ public class TouristRepository {
         attractions.add(attraction);
     }
 
+    public void removeAttraction(String name){
+        attractions.remove(findDescriptionByName(name));
+    }
+
     public ArrayList<TouristAttraction> getAttractions() {
         return attractions;
     }

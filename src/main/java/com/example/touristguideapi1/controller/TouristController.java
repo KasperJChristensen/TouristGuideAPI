@@ -8,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
-import java.util.Optional;
 
 @Controller
 @RequestMapping("attractions")
@@ -26,18 +25,24 @@ public class TouristController {
     }
 
     @GetMapping("/{name}")
-    public ResponseEntity<TouristAttraction> findDescriptionByName(@PathVariable String name) {
-        Optional<TouristAttraction> attraction = service.findDescriptionByName(name);
-        if (attraction.isEmpty()) {
+    public ResponseEntity<TouristAttraction> findAttractionByName(@PathVariable String name) {
+        TouristAttraction attraction = service.findAttractionByName(name);
+        if (attraction == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        return ResponseEntity.ok(attraction.get());
+        return ResponseEntity.ok(attraction);
 
     }
-    @PostMapping("/add")
 
+    @PostMapping("/add")
     public ResponseEntity<TouristAttraction> addAttraction(@RequestBody TouristAttraction attraction) {
-        service.addAttractions(attraction);
+        service.addAttraction(attraction);
         return new ResponseEntity<>(attraction, HttpStatus.OK);
+    }
+
+    @PostMapping("/delete/{name}")
+    public ResponseEntity<TouristAttraction> removeAttraction(@PathVariable String name){
+        service.removeAttraction(name);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
