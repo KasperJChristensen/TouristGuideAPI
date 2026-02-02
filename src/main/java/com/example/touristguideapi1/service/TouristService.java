@@ -20,7 +20,7 @@ public class TouristService {
         return repository.getAttractions();
     }
 
-    public Optional<TouristAttraction> findDescriptionByName(String name, String s) {
+    public Optional<TouristAttraction> findDescriptionByName(String name) {
 
         return Optional.ofNullable(repository.findDescriptionByName(name));
     }

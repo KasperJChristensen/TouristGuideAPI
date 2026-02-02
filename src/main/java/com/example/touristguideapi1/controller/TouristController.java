@@ -26,8 +26,8 @@ public class TouristController {
     }
 
     @GetMapping("/{name}")
-    public ResponseEntity<TouristAttraction> findDescriptionByName(@PathVariable String name, @RequestParam(required = false) String description) {
-        Optional<TouristAttraction> attraction = service.findDescriptionByName(name, description);
+    public ResponseEntity<TouristAttraction> findDescriptionByName(@PathVariable String name) {
+        Optional<TouristAttraction> attraction = service.findDescriptionByName(name);
         if (attraction.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
@@ -40,5 +40,4 @@ public class TouristController {
         service.addAttractions(attraction);
         return new ResponseEntity<>(attraction, HttpStatus.OK);
     }
-
 }
