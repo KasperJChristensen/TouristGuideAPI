@@ -31,11 +31,10 @@ public class TouristRepository {
 
     public TouristAttraction findDescriptionByName(String name) {
         for (TouristAttraction touristAttraction : attractions) {
-            if (touristAttraction.getName().equals(name)) {
+            if (touristAttraction.getName().equalsIgnoreCase(name)) {
                 return touristAttraction;
             }
         }
         return null;
-
     }
 }
