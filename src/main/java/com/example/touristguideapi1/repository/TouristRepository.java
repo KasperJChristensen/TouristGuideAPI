@@ -13,6 +13,7 @@ public class TouristRepository {
     public TouristRepository() {
         attractions();
     }
+
     private void attractions() {
         attractions.add(new TouristAttraction("Tivoli",
                 "Med ca. 2 minutters gågang fra Københavnshovedbanegård finder du Tivoli. " +
@@ -26,8 +27,10 @@ public class TouristRepository {
         attractions.add(attraction);
     }
 
-    public void removeAttraction(String name){
-        attractions.remove(findDescriptionByName(name));
+    public TouristAttraction removeAttraction(String name) {
+        TouristAttraction attraction = findDescriptionByName(name);
+        attractions.remove(attraction);
+        return attraction;
     }
 
     public ArrayList<TouristAttraction> getAttractions() {
@@ -42,7 +45,8 @@ public class TouristRepository {
         }
         return null;
     }
-    public TouristAttraction updateAttraction (TouristAttraction attraction) {
+
+    public TouristAttraction updateAttraction(TouristAttraction attraction) {
         for (TouristAttraction attraction1 : attractions) {
             if (attraction1.getName().equalsIgnoreCase(attraction.getName())) {
                 attraction1.setDescription(attraction.getDescription());

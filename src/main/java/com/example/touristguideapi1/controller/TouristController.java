@@ -42,8 +42,8 @@ public class TouristController {
 
     @PostMapping("/delete/{name}")
     public ResponseEntity<TouristAttraction> removeAttraction(@PathVariable String name) {
-        service.removeAttraction(name);
-        return new ResponseEntity<>(HttpStatus.OK);
+        TouristAttraction attraction = service.removeAttraction(name);
+        return new ResponseEntity<>(attraction, HttpStatus.OK);
     }
     @PostMapping("/update")
     public ResponseEntity<TouristAttraction> updateAttraction(@RequestBody TouristAttraction attraction) {

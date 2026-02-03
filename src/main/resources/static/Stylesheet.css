@@ -13,25 +13,8 @@ body {
 }
 
 header {
-    grid-area: header
-}
-
-nav {
-    grid-area: nav
-}
-
-main {
-    grid-area: main
-}
-
-footer {
-    grid-area: footer
-}
-
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    grid-area: header;
+    text-align: center;
     border: 3px solid black;
     background-color: lightcoral;
     color: black;
@@ -42,10 +25,18 @@ nav {
     grid-area: nav;
     padding: 1em 3em;
     border: none;
-
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+main {
+    grid-area: main
+}
+
+footer {
+    grid-area: footer;
+    background-color: #f0f0f0;
 }
 
 nav ul {
@@ -54,22 +45,15 @@ nav ul {
     justify-content: center;
     gap: 2em;
     margin: 0;
-    padding: 0;
-}
-
-nav ul {
     transition: gap 0.2s ease;
-}
-
-nav ul:hover {
-    gap: 2.4em;
-}
-
-nav ul {
     padding: 0.5em 1.5em;
     border-radius: 30px;
     background: rgba(240, 128, 128, 0.5);
     backdrop-filter: blur(10%);
+}
+
+nav ul:hover {
+    gap: 2.4em;
 }
 
 nav li {
@@ -91,14 +75,26 @@ nav a:hover {
     color: white;
 }
 
-footer {
-    background-color: #f0f0f0;
+.attractions li {
+    text-align: center;
+    margin: 1em auto;
+    padding: 1em;
+    border: solid black;
+    border-radius: 10px;
+    max-width: 400px;
+    list-style: none;
 }
 
-img {
-    max-width: 100%;
+.attractions img {
+    max-width: 400px;
     height: auto;
-    border: 2px solid black;
+}
+
+.attractions a {
     display: block;
-    margin: 0 auto;
+    transition: 0.3s;
+}
+
+.attractions a:hover {
+    transform: scale(1.02);
 }

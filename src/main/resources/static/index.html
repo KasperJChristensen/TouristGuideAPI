@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="Stylesheet.css">
 </head>
 <body>
-<header class="center">
+<header>
     Tourist Guide Copenhagen | The Capital Of Denmark | The Only Guide You Need
 </header>
 
 <nav>
     <ul>
         <li>
-            <a href="#http://localhost:63342/TouristGuideAPI/TouristGuideAPI1/static/index.html?_ijt=ppnpld8qc51emb153vlod3u633&_ij_reload=RELOAD_ON_SAVE">Home</a>
+            <a href="index.html">Home</a>
         </li>
         <li><a href="#City">City</a></li>
         <li><a href="http://localhost:8080/attractions">Attractions</a></li>
@@ -21,27 +21,38 @@
     </ul>
 </nav>
 <main>
-    <p>When you are visiting Copenhagen</p>
-    <br>
-    Sightseeing is a great way to explore the city
-    <br>
-    This website is here to help you navigate the attractions of Copenhagen.
-    <p>Visit "Tivoli" <br>
-        <a href="http://localhost:8080/attractions/Tivoli"><img src="images/Tivoli.png" alt="Tivoli" width="500" height="250"></a>
-    </p>
-    <p>Visit "Strøget" <br>
-        <a href="http://localhost:8080/attractions/Strøget"><img src="images/Strøget.png" alt="Strøget" width="500" height="250"></a>
-    </p>
+    <article>
+        <p>When you visit Copenhagen, sightseeing is a wonderful way to experience the city. This
+            website is designed to help you navigate the most popular attractions in the Danish capital.</p>
+    </article>
+
+    <a href="http://localhost:8080/attractions"> See all attractions</a>
+
+    <ul class="attractions">
+        <li>
+            <a href="http://localhost:8080/attractions/Tivoli">
+                <h2>Tivoli</h2>
+                <img src="images/Tivoli.png" alt="Tivoli">
+            </a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/attractions/Strøget">
+                <h2>Strøget</h2>
+                <img src="images/Strøget.png" alt="Strøget">
+            </a>
+        </li>
+    </ul>
+
 </main>
 
 <footer>
-    <p>Kontakt os: <a href="mailto:TouristGuide@Guide.com"> turistguide@guide.com | Telefon: +45 30 30 30 40 </a></p>
-    <div>
-        <h4> Relevante eksterne links</h4>
-        <ul>
-            <li><a href="https://www.citypass.dk" target="blank"> Citypass - Public transportation in Denmark </a></li>
-        </ul>
-    </div>
+    <p>Contact us: <a href="mailto:TouristGuide@Guide.com"> turistguide@guide.com | Telefon: +45 30 30 30 40 </a></p>
+
+    <h4> Relevant links</h4>
+
+    <a href="https://dinoffentligetransport.dk/turist" target="_blank"> Citypass - Public transportation in
+        Denmark </a>
+
 </footer>
 
 </body>
