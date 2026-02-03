@@ -10,6 +10,7 @@ body {
     grid-template-rows: auto auto 1fr auto;
     gap: 0.5em;
     margin: 0;
+    background: linear-gradient(to bottom, #ffe5e5, #fffafa);
 }
 
 header {
@@ -21,7 +22,11 @@ nav {
 }
 
 main {
-    grid-area: main
+    grid-area: main;
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.5em;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 footer {
@@ -39,6 +44,8 @@ footer {
 }
 
 nav {
+    width: fit-content;
+    margin: 0 auto;
     grid-area: nav;
     padding: 1em 3em;
     border: none;
@@ -67,7 +74,7 @@ nav ul:hover {
 
 nav ul {
     padding: 0.5em 1.5em;
-    border-radius: 30px;
+    border-radius: 4px;
     background: rgba(240, 128, 128, 0.5);
     backdrop-filter: blur(10%);
 }
@@ -102,3 +109,21 @@ img {
     display: block;
     margin: 0 auto;
 }
+.visit {
+    text-align: center;
+}
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.01);
+    transition: transform 0.3s ease;
+}
+.glass {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 16px;
+}
+
