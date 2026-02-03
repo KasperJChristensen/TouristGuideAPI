@@ -3,6 +3,7 @@ package com.example.touristguideapi1.repository;
 import com.example.touristguideapi1.model.TouristAttraction;
 import org.springframework.stereotype.Repository;
 
+
 import java.util.ArrayList;
 
 @Repository
@@ -38,6 +39,16 @@ public class TouristRepository {
             if (touristAttraction.getName().equalsIgnoreCase(name)) {
                 return touristAttraction;
             }
+        }
+        return null;
+    }
+    public TouristAttraction updateAttraction (TouristAttraction attraction) {
+        for (TouristAttraction attraction1 : attractions) {
+            if (attraction1.getName().equalsIgnoreCase(attraction.getName())) {
+                attraction1.setDescription(attraction.getDescription());
+                return attraction1;
+            }
+
         }
         return null;
     }

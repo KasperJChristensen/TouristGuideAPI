@@ -31,5 +31,8 @@ public class TouristService {
         repository.removeAttraction(name);
     }
 
+    public TouristAttraction updatedAttraction(TouristAttraction attraction) {
+        return repository.updateAttraction(attraction);
+    }
 
 }
