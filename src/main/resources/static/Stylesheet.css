@@ -49,7 +49,7 @@ nav ul {
 
     nav ul {
         padding: 0.5em 1.5em;
-        border-radius: 80px;
+        border-radius: 30px;
         background: rgba(240,128,128,0.5);
         backdrop-filter: blur(10%);
     }

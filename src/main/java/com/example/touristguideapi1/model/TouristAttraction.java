@@ -1,8 +1,8 @@
 package com.example.touristguideapi1.model;
 
 public class TouristAttraction {
-    private String name;
-    private String description;
+    private final String name;
+    private final String description;
 
     public TouristAttraction(String name, String description) {
         this.name = name;
