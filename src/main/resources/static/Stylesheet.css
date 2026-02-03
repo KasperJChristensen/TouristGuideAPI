@@ -1,4 +1,4 @@
-body{
+body {
     min-height: 100vh;
     display: grid;
     grid-template-areas:
@@ -11,10 +11,22 @@ body{
     gap: 0.5em;
     margin: 0;
 }
-header { grid-area: header}
-nav    { grid-area: nav   }
-main   { grid-area: main  }
-footer { grid-area: footer}
+
+header {
+    grid-area: header
+}
+
+nav {
+    grid-area: nav
+}
+
+main {
+    grid-area: main
+}
+
+footer {
+    grid-area: footer
+}
 
 .center {
     display: flex;
@@ -25,6 +37,7 @@ footer { grid-area: footer}
     color: black;
     padding: 1em;
 }
+
 nav {
     grid-area: nav;
     padding: 1em 3em;
@@ -34,6 +47,7 @@ nav {
     top: 0;
     z-index: 1000;
 }
+
 nav ul {
     list-style: none;
     display: flex;
@@ -43,20 +57,25 @@ nav ul {
     padding: 0;
 }
 
-    nav ul       {transition: gap 0.2s ease;}
+nav ul {
+    transition: gap 0.2s ease;
+}
 
-    nav ul:hover {gap: 2.4em;}
+nav ul:hover {
+    gap: 2.4em;
+}
 
-    nav ul {
-        padding: 0.5em 1.5em;
-        border-radius: 30px;
-        background: rgba(240,128,128,0.5);
-        backdrop-filter: blur(10%);
-    }
+nav ul {
+    padding: 0.5em 1.5em;
+    border-radius: 30px;
+    background: rgba(240, 128, 128, 0.5);
+    backdrop-filter: blur(10%);
+}
 
 nav li {
     margin: 0;
 }
+
 nav a {
     color: black;
     font-weight: bold;
@@ -71,9 +90,11 @@ nav a:hover {
     text-decoration: underline;
     color: white;
 }
+
 footer {
     background-color: #f0f0f0;
 }
+
 img {
     max-width: 100%;
     height: auto;
