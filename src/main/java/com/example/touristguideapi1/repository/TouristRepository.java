@@ -29,7 +29,9 @@ public class TouristRepository {
 
     public TouristAttraction removeAttraction(String name) {
         TouristAttraction attraction = findDescriptionByName(name);
-        attractions.remove(attraction);
+        if (attraction != null) {
+            attractions.remove(attraction);
+        }
         return attraction;
     }
 
@@ -47,13 +49,10 @@ public class TouristRepository {
     }
 
     public TouristAttraction updateAttraction(TouristAttraction attraction) {
-        for (TouristAttraction attraction1 : attractions) {
-            if (attraction1.getName().equalsIgnoreCase(attraction.getName())) {
-                attraction1.setDescription(attraction.getDescription());
-                return attraction1;
+        TouristAttraction updatedAttraction = findDescriptionByName(attraction.getName());
+            if (updatedAttraction != null) {
+                updatedAttraction.setDescription(attraction.getDescription());
             }
-
-        }
-        return null;
+        return updatedAttraction;
     }
 }
