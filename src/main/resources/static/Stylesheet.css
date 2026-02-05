@@ -16,6 +16,7 @@ header {
     grid-area: header;
     text-align: center;
     border: 3px solid black;
+    border-radius: 8px;
     background-color: lightcoral;
     color: black;
     padding: 1em;
@@ -83,12 +84,15 @@ nav a:hover {
     border-radius: 10px;
     max-width: 400px;
     list-style: none;
+
 }
 
 .attractions img {
     max-width: 400px;
     height: auto;
     border-radius: 1px;
+    border: solid black;
+
 }
 
 .attractions a {
