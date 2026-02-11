@@ -11,11 +11,11 @@
     <tr th:if="${!attractions.isEmpty()}">
         <th>Attraction</th><th>Description</th>
     </tr>
-    <tr th:each="TouristAttraction: ${attraction}">
-        <td th:text="${TouristAttraction.getName}"></td>
-        <td th:text="${TouristAttraction.getDescription}"></td>
+    <tr th:each="attraction : ${attractions}">
+        <td th:text="${attraction.name}"></td>
+        <td th:text="${attraction.description}"></td>
         <td>
-            <a th:href="@{/attraction/"
+            <a th:href="@{/attractions/{name}(name=${attraction.name})}">View</a>
         </td>
     </tr>
 </table>

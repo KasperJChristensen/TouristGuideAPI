@@ -6,7 +6,7 @@ public enum Category {
     SHOPPING("Shopping"),
     NATURE("Nature"),
     FAMILY_FRIENDLY("Family Friendly"),
-    HISTORY("History");
+    HISTORY("Historical");
 
     private final String displayName;
 

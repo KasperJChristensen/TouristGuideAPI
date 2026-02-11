@@ -32,7 +32,7 @@ public class TouristController {
     public String findAttractionByName(@PathVariable String name, Model model) {
         TouristAttraction attraction = service.findAttractionByName(name);
         if (attraction == null) {
-            model.addAttribute("errorMessage", "The attraction" + name + "has not been found");
+            model.addAttribute("errorMessage", "The attraction " + name + " has not been found");
             return "error";
         }
         model.addAttribute("attraction", attraction);
@@ -42,7 +42,7 @@ public class TouristController {
     @PostMapping("/add")
     public String addAttraction(@ModelAttribute TouristAttraction attraction) {
         service.addAttraction(attraction);
-        return "redirect:/attraction/attraction";
+        return "redirect:/attractions";
     }
 
     @GetMapping("/edit")
@@ -72,6 +72,13 @@ public class TouristController {
     @PostMapping("/update")
     public String updatedAttraction(@ModelAttribute TouristAttraction attraction) {
         service.updatedAttraction(attraction);
-        return "redirect:/attraction/attractions";
+        return "redirect:/attractions";
     }
+
+    @PostMapping("/save")
+    public String saveAttraction(@ModelAttribute TouristAttraction attraction) {
+        service.addAttraction(attraction);
+        return "redirect:/attractions";
+    }
+
 }
