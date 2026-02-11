@@ -27,28 +27,31 @@ public class TouristController {
     }
 
     @GetMapping("/{name}")
-    public ResponseEntity<TouristAttraction> findAttractionByName(@PathVariable String name) {
+    public String findAttractionByName(@PathVariable String name, Model model) {
         TouristAttraction attraction = service.findAttractionByName(name);
         if (attraction == null) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            model.addAttribute("errorMessage", "The attraction" + name + "has not been found");
+            return "error";
         }
-        return ResponseEntity.ok(attraction);
+        model.addAttribute("attraction", attraction);
+        return "attraction";
 
     }
 
     @PostMapping("/add")
-    public ResponseEntity<TouristAttraction> addAttraction(@RequestBody TouristAttraction attraction) {
+    public String addAttraction(@ModelAttribute TouristAttraction attraction) {
         service.addAttraction(attraction);
-        return new ResponseEntity<>(attraction, HttpStatus.OK);
+        return "redirect:/attraction/attraction";
     }
 
     @PostMapping("/delete/{name}")
-    public ResponseEntity<TouristAttraction> removeAttraction(@PathVariable String name) {
+    public String removeAttraction(@PathVariable String name, Model model) {
         TouristAttraction attraction = service.removeAttraction(name);
         if (attraction == null) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            throw new IllegalArgumentException("No attraction matches the name" + name);
         }
-        return new ResponseEntity<>(attraction, HttpStatus.OK);
+        model.addAttribute("attraction", attraction);
+        return "attraction-delete";
     }
 
     @PostMapping("/update")
