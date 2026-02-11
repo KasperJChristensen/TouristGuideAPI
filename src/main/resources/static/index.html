@@ -1,42 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>TuristGuide</title>
-    <link rel = "stylesheet" href = "Stylesheet.css">
+    <link rel="stylesheet" href="Stylesheet.css">
 </head>
-<nav class="w3-bar w3-black">
-    <a href = "#home" class = "w3-button w3-bar-item">Home</a>
-    <a href = "#city" class = "w3-button w3-bar-item">City</a>
-    <a href = "#attraction" class = "w3-button w3-bar-item">Attraction</a>
-    <a href = "#Contact" class = "w3-button w3-bar-item">Contact</a>
-</nav>
-
-<section>
-
-</section>
 <body>
+<header>
+    Tourist Guide Copenhagen | The Capital Of Denmark | The Only Guide You Need
+</header>
 
-<h2 class="center">Tourist guide Copenhagen</h2>
-<p>When you are visiting Copenhagen <br>
-  there are some must see tourist sights.
+<nav>
+    <ul>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li><a href="#City">City</a></li>
+        <li><a href="http://localhost:8080/attractions">Attractions</a></li>
+        <li><a href="#Contact">Contact</a></li>
+    </ul>
+</nav>
+<main>
+    <article>
+        <p>Discover Copenhagen’s most popular attractions with this tourist guide.
+            Here you will find inspiration, highlights, and essential information
+            to make the most of your visit to Denmark’s capital.</p>
+    </article>
 
-This website is here to help you navigate the attractions of Copenhagen.</p>
+    <ul class="attractions">
+        <li>
+            <a href="http://localhost:8080/attractions/Tivoli">
+                <h2>Tivoli</h2>
+                <img src="images/Tivoli.png" alt="Tivoli">
+            </a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/attractions/Strøget">
+                <h2>Strøget</h2>
+                <img src="images/Strøget.png" alt="Strøget">
+            </a>
+        </li>
+    </ul>
 
-<p>Visit "Tivoli"</p>
+</main>
 
 <footer>
-    Kontakt os: turistguide@guide.com | Telefon:+45 30 30 30 40
+    <p>Contact us: <a href="mailto:TouristGuide@Guide.com"> turistguide@guide.com | Telefon: +45 30 30 30 40 </a></p>
 
-<section>
-    <h4>Relevante ekstern links</h4>
-    <ul>
-        <li><a href="https://www.citypass.dk" target="_blank">Citypass - offentlig transport i danmark <</a> </li>
-    </ul>
-</section>
+    <h4> Relevant links</h4>
+
+    <a href="https://dinoffentligetransport.dk/turist" target="_blank"> Citypass - Public transportation in
+        Denmark </a>
 
 </footer>
-
 
 </body>
 </html>
