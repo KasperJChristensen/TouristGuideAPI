@@ -31,7 +31,7 @@ public class TouristRepository {
                 "Strøget",
                 "Strøget starter ved Københavns Rådhusplads og strækker sig ca. 1 km gennem " +
                         "byens centrum til Kongens Nytorv. Det er en af Europas længste gågader.",
-                "Rådhuspladsen – Kongens Nytorv",
+                "København – Kongens Nytorv",
                 List.of(Category.CULTURE, Category.SHOPPING, Category.SIGHTSEEING)
         ));
 
@@ -51,6 +51,7 @@ public class TouristRepository {
                 List.of(Category.CULTURE, Category.FAMILY_FRIENDLY, Category.HISTORY)
         ));
     }
+
 
     // Metode til at kunne tilføje attraktioner //
     public void addAttraction(TouristAttraction attraction) {
