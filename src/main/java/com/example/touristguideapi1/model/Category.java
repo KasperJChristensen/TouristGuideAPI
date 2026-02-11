@@ -5,6 +5,7 @@ public enum Category {
     SIGHTSEEING,
     SHOPPING,
     NATURE,
-    FAMILY_FRIENDLY
+    FAMILY_FRIENDLY,
+    HISTORY
 }
 

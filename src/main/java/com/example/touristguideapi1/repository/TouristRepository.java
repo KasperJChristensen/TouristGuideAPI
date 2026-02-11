@@ -20,27 +20,35 @@ public class TouristRepository {
     private void attractions() {
         attractions.add(new TouristAttraction(
                 "Tivoli",
-                "Med ca. 2 minutters gang fra Københavns Hovedbanegård finder du Tivoli. " +
-                        "En historisk forlystelsespark grundlagt i 1843, kendt for sin stemning, " +
-                        "forlystelser og verdens ældste rutsjebane.",
-                "København",
+                "About a 2-minute walk from Copenhagen Central Station you will find Tivoli. " +
+                        "A historic amusement park founded in 1843, known for its atmosphere, " +
+                        "amusement rides and the world's oldest roller coaster.",
+                "Copenhagen",
                 List.of(Category.CULTURE, Category.SIGHTSEEING, Category.FAMILY_FRIENDLY)
         ));
 
         attractions.add(new TouristAttraction(
                 "Strøget",
-                "Strøget starter ved Københavns Rådhusplads og strækker sig ca. 1 km gennem " +
-                        "byens centrum til Kongens Nytorv. Det er en af Europas længste gågader.",
-                "København – Kongens Nytorv",
+                "Strøget starts at Copenhagen's Town Hall Square and stretches for about 1 km through the " +
+                        "city center to Kongens Nytorv. It is one of Europe's longest pedestrian streets.",
+                "Copenhagen – Kongens Nytorv",
                 List.of(Category.CULTURE, Category.SHOPPING, Category.SIGHTSEEING)
         ));
 
         attractions.add(new TouristAttraction(
-                "Kongens Have",
-                "Kongens Have er Danmarks ældste kongelige have og ligger ved Rosenborg Slot. " +
-                        "Et populært grønt åndehul med historiske omgivelser midt i København.",
-                "København",
+                "The King's Garden",
+                "The King's Garden is Denmark's oldest royal garden and is located at Rosenborg Castle. " +
+                        "A popular green haven with historic surroundings in the middle of Copenhagen.",
+                "Copenhagen",
                 List.of(Category.CULTURE, Category.NATURE, Category.SIGHTSEEING, Category.FAMILY_FRIENDLY)
+        ));
+
+        attractions.add(new TouristAttraction(
+                "The Viking Ship Museum",
+                "With the sound of the waves and smell of wet wood, the Viking Ship Museum is located right by Roskilde Fjord and it is a great visit for anyone with Viking blood in their veins." +
+                        "Here you have plenty of activities, history, atmosphere and beautiful harbor - you can even go sailing.",
+                "Roskilde" + "Vindeboder 12",
+                List.of(Category.CULTURE, Category.FAMILY_FRIENDLY, Category.HISTORY)
         ));
     }
 
