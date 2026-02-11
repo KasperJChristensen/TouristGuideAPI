@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Show attractions</title>
 </head>
 <body>
-
+<h1>Attractions</h1>
+<table>
+    <tr th:if="${attractions.isEmpty()}">There are no attractions yet</tr>
+    <tr th:if="${!attractions.isEmpty()}">
+        <th>Attraction</th><th>Description</th>
+    </tr>
+    <tr th:each="TouristAttraction: ${attraction}">
+        <td th:text="${TouristAttraction.getName}"></td>
+        <td th:text="${TouristAttraction.getDescription}"></td>
+        <td>
+            <a th:href="@{/attraction/"
+        </td>
+    </tr>
+</table>
 </body>
 </html>
