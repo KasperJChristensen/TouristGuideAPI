@@ -42,6 +42,14 @@ public class TouristRepository {
                 "København",
                 List.of(Category.CULTURE, Category.NATURE, Category.SIGHTSEEING, Category.FAMILY_FRIENDLY)
         ));
+
+        attractions.add(new TouristAttraction(
+                "The Viking Ship Museum",
+                "With the sound of the waves and smell of wet wood, the Viking Ship Museum is located right by Roskilde Fjord and it is a great visit for anyone with Viking blood in their veins." +
+                        "Here you have plenty of activities, history, atmosphere and beautiful harbor - you can even go sailing.",
+                "Roskilde" + "Vindeboder 12",
+                List.of(Category.CULTURE, Category.FAMILY_FRIENDLY, Category.HISTORY)
+        ));
     }
 
     // Metode til at kunne tilføje attraktioner //
