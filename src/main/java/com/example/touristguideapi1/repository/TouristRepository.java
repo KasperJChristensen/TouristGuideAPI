@@ -52,6 +52,19 @@ public class TouristRepository {
         ));
     }
 
+    public List<Category> getTags() {
+        return List.of(
+                Category.CULTURE,
+                Category.NATURE,
+                Category.HISTORY,
+                Category.SIGHTSEEING,
+                Category.SHOPPING,
+                Category.FAMILY_FRIENDLY);
+    }
+
+    public List<String> getCites() {
+
+    }
 
     // Metode til at kunne tilføje attraktioner //
     public void addAttraction(TouristAttraction attraction) {
@@ -70,6 +83,7 @@ public class TouristRepository {
     public ArrayList<TouristAttraction> getAttractions() {
         return attractions;
     }
+
     public TouristAttraction findDescriptionByName(String name) {
         for (TouristAttraction touristAttraction : attractions) {
             if (touristAttraction.getName().equalsIgnoreCase(name)) {
@@ -86,5 +100,7 @@ public class TouristRepository {
             updatedAttraction.setDescription(attraction.getDescription());
         }
         return updatedAttraction;
+
     }
 }
+

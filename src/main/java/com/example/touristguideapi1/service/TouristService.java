@@ -1,10 +1,12 @@
 package com.example.touristguideapi1.service;
 
+import com.example.touristguideapi1.model.Category;
 import com.example.touristguideapi1.model.TouristAttraction;
 import com.example.touristguideapi1.repository.TouristRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class TouristService {
@@ -31,8 +33,10 @@ public class TouristService {
         return repository.removeAttraction(name);
     }
 
-    public TouristAttraction updatedAttraction(TouristAttraction attraction) {
-        return repository.updateAttraction(attraction);
+    public TouristAttraction updatedAttraction(TouristAttraction attraction) {return repository.updateAttraction(attraction);}
+
+    public TouristAttraction getTags() {
+        return repository.getTags();
     }
 
 }
