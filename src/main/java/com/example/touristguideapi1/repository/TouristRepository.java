@@ -59,11 +59,23 @@ public class TouristRepository {
                 Category.HISTORY,
                 Category.SIGHTSEEING,
                 Category.SHOPPING,
-                Category.FAMILY_FRIENDLY);
+                Category.FAMILY_FRIENDLY
+        );
     }
 
     public List<String> getCites() {
-
+        return List.of(
+                "København",
+                "Roskilde",
+                "Helsingør",
+                "Næstved",
+                "Køge",
+                "Slagelse",
+                "Holbæk",
+                "Kalundborg",
+                "Hillerød",
+                "Vordingborg"
+        );
     }
 
     // Metode til at kunne tilføje attraktioner //
@@ -100,7 +112,6 @@ public class TouristRepository {
             updatedAttraction.setDescription(attraction.getDescription());
         }
         return updatedAttraction;
-
     }
 }
 

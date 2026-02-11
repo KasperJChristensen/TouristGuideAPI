@@ -35,8 +35,9 @@ public class TouristService {
 
     public TouristAttraction updatedAttraction(TouristAttraction attraction) {return repository.updateAttraction(attraction);}
 
-    public TouristAttraction getTags() {
-        return repository.getTags();
-    }
+    public List<Category> getTags() {return repository.getTags();}
+
+    public List<String> getCities() {return repository.getCites();}
+
 
 }
