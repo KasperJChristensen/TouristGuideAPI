@@ -1,7 +1,9 @@
 package com.example.touristguideapi1.controller;
 
+import com.example.touristguideapi1.model.Category;
 import com.example.touristguideapi1.model.TouristAttraction;
 import com.example.touristguideapi1.service.TouristService;
+import org.apache.catalina.User;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -35,7 +37,6 @@ public class TouristController {
         }
         model.addAttribute("attraction", attraction);
         return "attraction";
-
     }
 
     @PostMapping("/add")
@@ -43,6 +44,20 @@ public class TouristController {
         service.addAttraction(attraction);
         return "redirect:/attraction/attraction";
     }
+
+    @GetMapping("/edit")
+    public String editAttraction(@PathVariable String attraction, Model model){
+        TouristAttraction a = service.findAttractionByName(attraction);
+        if(a==null){
+            throw new IllegalArgumentException("Unknow attraction");
+        }
+        model.addAttribute("attraction", a);
+        model.addAttribute("Description", service.getAttractions());
+        model.addAttribute("Categories", Category.values());
+        return "edit-attractions";
+    }
+
+
 
     @PostMapping("/delete/{name}")
     public String removeAttraction(@PathVariable String name, Model model) {

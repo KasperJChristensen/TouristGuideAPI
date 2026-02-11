@@ -17,7 +17,7 @@ public class TouristService {
         this.repository = repository;
     }
 
-    public ArrayList<TouristAttraction> getAttractions(){
+    public ArrayList<TouristAttraction> getAttractions() {
         return repository.getAttractions();
     }
 
@@ -29,15 +29,21 @@ public class TouristService {
         repository.addAttraction(attraction);
     }
 
-    public TouristAttraction removeAttraction(String name){
+    public TouristAttraction removeAttraction(String name) {
         return repository.removeAttraction(name);
     }
 
-    public TouristAttraction updatedAttraction(TouristAttraction attraction) {return repository.updateAttraction(attraction);}
+    public TouristAttraction updatedAttraction(TouristAttraction attraction) {
+        return repository.updateAttraction(attraction);
+    }
 
-    public List<Category> getTags() {return repository.getTags();}
+    public List<Category> getTags() {
+        return repository.getTags();
+    }
 
-    public List<String> getCities() {return repository.getCites();}
+    public List<String> getCities() {
+        return repository.getCites();
+    }
 
 
 }
